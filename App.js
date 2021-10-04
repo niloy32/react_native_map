@@ -1,12 +1,22 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, Dimensions, Image, Modal } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  Image,
+  Modal,
+  FlatList,
+} from "react-native";
 import MapView, { Marker, Circle, Callout } from "react-native-maps";
 import * as Location from "expo-location";
 import { FontAwesome5 } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("screen");
+import { createStackNavigator } from "react-navigation-stack";
+import ReviewDetails from "./placeDetails";
 
-const App = (props) => {
+const App = ({ navigation }) => {
   const test = () => alert("pera");
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -85,7 +95,11 @@ const App = (props) => {
       Image: "https://picsum.photos/200",
     },
   ]);
-
+  const [reviews, setReviews] = useState([
+    { title: "zelda 1", rating: 5, body: "body1", key: "1" },
+    { title: "zelda 2", rating: 5, body: "body2", key: "2" },
+    { title: "zelda 3", rating: 5, body: "body3", key: "3" },
+  ]);
   // useEffect(() => {
   //   (async () => {
   //     let { status } = await Location.requestForegroundPermissionsAsync();
@@ -212,6 +226,7 @@ const App = (props) => {
             source={require("./assets/Image20.png")}
           ></Image>
           <Callout
+            onPress={() => navigation.navigate("ReviewDetails", { item })}
             style={{
               position: "absolute",
               width: 200,
@@ -221,6 +236,7 @@ const App = (props) => {
             }}
           >
             <Text> NAME</Text>
+
             <Text>
               <Image
                 style={{
