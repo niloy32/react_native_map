@@ -14,7 +14,7 @@ import * as Location from "expo-location";
 import { FontAwesome5 } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("screen");
 import { createStackNavigator } from "react-navigation-stack";
-import ReviewDetails from "./placeDetails";
+import Navigator from "./routes/HomeStack";
 
 const App = ({ navigation }) => {
   const test = () => alert("pera");
@@ -125,166 +125,167 @@ const App = ({ navigation }) => {
   // }, []);
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <MapView
-        initialRegion={{
-          latitude: 23.7269877,
-          longitude: 90.3754865,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-        // initialRegion={mapRegion}
-        style={styles.mapView}
-      >
-        {/* <Marker
-          coordinate={{
-            latitude: 23.748161,
-            longitude: 90.375283,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-          title="Niloy"
-          description="Dont Click ME"
-        >
-          <Image
-            style={styles.circle}
-            mapType="hybrid"
-            source={{
-              width: 20,
-              height: 20,
-              uri: "https://picsum.photos/200",
-            }}
-          ></Image>
-        </Marker>
-        <Marker
-          coordinate={{
-            latitude: 23.874163,
-            longitude: 90.384122,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-          title="Niloy"
-          description="Dont Click ME"
-        >
-          <Image
-            style={styles.circle}
-            source={require("./assets/Image23.png")}
-          ></Image>
-        </Marker>
-        <Marker
-          coordinate={{
-            latitude: 23.793446,
-            longitude: 90.408237,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-          title="Niloy"
-          description="Dont Click ME"
-        >
-          <Image
-            style={styles.circle}
-            source={require("./assets/Image20.png")}
-          ></Image>
-        </Marker> */}
+    <Navigator />
+    // <View style={styles.container}>
+    //   <StatusBar style="auto" />
+    //   <MapView
+    //     initialRegion={{
+    //       latitude: 23.7269877,
+    //       longitude: 90.3754865,
+    //       latitudeDelta: 0.0922,
+    //       longitudeDelta: 0.0421,
+    //     }}
+    //     // initialRegion={mapRegion}
+    //     style={styles.mapView}
+    //   >
+    //     {/* <Marker
+    //       coordinate={{
+    //         latitude: 23.748161,
+    //         longitude: 90.375283,
+    //         latitudeDelta: 0.0922,
+    //         longitudeDelta: 0.0421,
+    //       }}
+    //       title="Niloy"
+    //       description="Dont Click ME"
+    //     >
+    //       <Image
+    //         style={styles.circle}
+    //         mapType="hybrid"
+    //         source={{
+    //           width: 20,
+    //           height: 20,
+    //           uri: "https://picsum.photos/200",
+    //         }}
+    //       ></Image>
+    //     </Marker>
+    //     <Marker
+    //       coordinate={{
+    //         latitude: 23.874163,
+    //         longitude: 90.384122,
+    //         latitudeDelta: 0.0922,
+    //         longitudeDelta: 0.0421,
+    //       }}
+    //       title="Niloy"
+    //       description="Dont Click ME"
+    //     >
+    //       <Image
+    //         style={styles.circle}
+    //         source={require("./assets/Image23.png")}
+    //       ></Image>
+    //     </Marker>
+    //     <Marker
+    //       coordinate={{
+    //         latitude: 23.793446,
+    //         longitude: 90.408237,
+    //         latitudeDelta: 0.0922,
+    //         longitudeDelta: 0.0421,
+    //       }}
+    //       title="Niloy"
+    //       description="Dont Click ME"
+    //     >
+    //       <Image
+    //         style={styles.circle}
+    //         source={require("./assets/Image20.png")}
+    //       ></Image>
+    //     </Marker> */}
 
-        {/* <Marker
-          coordinate={location_.location}
-          title={location_.username}
-          description={location_.description}
-          key={location_.id}
-          // image={require("./assets/Image20.png")}
-        >
-          <Callout onPress={test}>
-            <Text>{location_.username}</Text>
-            <Text>
-              <Image source={require("./assets/Image20.png")}></Image>
-            </Text>
-            <Text>{location_.description}</Text>
-          </Callout> */}
-        {/* <FontAwesome5
-                  name={location_.icon}
-                  size={26}
-                  style={{ color: "blue" }}
-                /> */}
-        {/* <Image style={styles.circle} source={require(location_.Image)} /> */}
-        {/* <Text style={{ fontSize: 15 }}>Modal Text</Text> */}
-        {/* <Image
-            style={styles.circle}
-            source={require("./assets/Image20.png")}
-          ></Image>{" "}
-          key={my_list[0].id}>
-        </Marker> */}
-        <Marker
-          coordinate={my_list[0].location}
-          title={my_list[0].username}
-          description={my_list[0].description}
-          key={my_list[0].id}
-        >
-          <Image
-            style={styles.circle}
-            source={require("./assets/Image20.png")}
-          ></Image>
-          <Callout
-            onPress={() => navigation.navigate("ReviewDetails", { item })}
-            style={{
-              position: "absolute",
-              width: 200,
-              height: 220,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Text> NAME</Text>
+    //     {/* <Marker
+    //       coordinate={location_.location}
+    //       title={location_.username}
+    //       description={location_.description}
+    //       key={location_.id}
+    //       // image={require("./assets/Image20.png")}
+    //     >
+    //       <Callout onPress={test}>
+    //         <Text>{location_.username}</Text>
+    //         <Text>
+    //           <Image source={require("./assets/Image20.png")}></Image>
+    //         </Text>
+    //         <Text>{location_.description}</Text>
+    //       </Callout> */}
+    //     {/* <FontAwesome5
+    //               name={location_.icon}
+    //               size={26}
+    //               style={{ color: "blue" }}
+    //             /> */}
+    //     {/* <Image style={styles.circle} source={require(location_.Image)} /> */}
+    //     {/* <Text style={{ fontSize: 15 }}>Modal Text</Text> */}
+    //     {/* <Image
+    //         style={styles.circle}
+    //         source={require("./assets/Image20.png")}
+    //       ></Image>{" "}
+    //       key={my_list[0].id}>
+    //     </Marker> */}
+    //     <Marker
+    //       coordinate={my_list[0].location}
+    //       title={my_list[0].username}
+    //       description={my_list[0].description}
+    //       key={my_list[0].id}
+    //     >
+    //       <Image
+    //         style={styles.circle}
+    //         source={require("./assets/Image20.png")}
+    //       ></Image>
+    //       <Callout
+    //         onPress={() => navigation.navigate("ReviewDetails", { item })}
+    //         style={{
+    //           position: "absolute",
+    //           width: 200,
+    //           height: 220,
+    //           alignItems: "center",
+    //           justifyContent: "center",
+    //         }}
+    //       >
+    //         <Text> NAME</Text>
 
-            <Text>
-              <Image
-                style={{
-                  height: 100,
-                }}
-                source={require("./assets/Image20.png")}
-              ></Image>
-            </Text>
-            <Text>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-              atque ut animi quisquam, reprehenderit distinctio a.
-            </Text>
-          </Callout>
-        </Marker>
+    //         <Text>
+    //           <Image
+    //             style={{
+    //               height: 100,
+    //             }}
+    //             source={require("./assets/Image20.png")}
+    //           ></Image>
+    //         </Text>
+    //         <Text>
+    //           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+    //           atque ut animi quisquam, reprehenderit distinctio a.
+    //         </Text>
+    //       </Callout>
+    //     </Marker>
 
-        {/* {my_list
-          ? my_list.map((location_) => (
-              <Marker
-                coordinate={location_.location}
-                title={location_.username}
-                description={location_.description}
-                key={location_.id}
-                // image={require("./assets/Image20.png")}
-              >
-                <Callout onPress={test}>
-                  <Text>{location_.username}</Text>
-                  <Text>
-                    <Image source={require("./assets/Image20.png")}></Image>
-                  </Text>
-                  <Text>{location_.description}</Text>
-                </Callout> */}
-        {/* <FontAwesome5
-                  name={location_.icon}
-                  size={26}
-                  style={{ color: "blue" }}
-                /> */}
-        {/* <Image style={styles.circle} source={require(location_.Image)} /> */}
+    //     {/* {my_list
+    //       ? my_list.map((location_) => (
+    //           <Marker
+    //             coordinate={location_.location}
+    //             title={location_.username}
+    //             description={location_.description}
+    //             key={location_.id}
+    //             // image={require("./assets/Image20.png")}
+    //           >
+    //             <Callout onPress={test}>
+    //               <Text>{location_.username}</Text>
+    //               <Text>
+    //                 <Image source={require("./assets/Image20.png")}></Image>
+    //               </Text>
+    //               <Text>{location_.description}</Text>
+    //             </Callout> */}
+    //     {/* <FontAwesome5
+    //               name={location_.icon}
+    //               size={26}
+    //               style={{ color: "blue" }}
+    //             /> */}
+    //     {/* <Image style={styles.circle} source={require(location_.Image)} /> */}
 
-        {/* <Text style={{ fontSize: 15 }}>Modal Text</Text> */}
-        {/* <Image
-                  style={styles.circle}
-                  source={require("./assets/Image20.png")}
-                ></Image>
-              </Marker>
-            ))
-          : null} */}
-      </MapView>
-    </View>
+    //     {/* <Text style={{ fontSize: 15 }}>Modal Text</Text> */}
+    //     {/* <Image
+    //               style={styles.circle}
+    //               source={require("./assets/Image20.png")}
+    //             ></Image>
+    //           </Marker>
+    //         ))
+    //       : null} */}
+    //   </MapView>
+    // </View>
   );
 };
 

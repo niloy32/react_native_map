@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -9,8 +8,9 @@ import {
   Modal,
   FlatList,
 } from "react-native";
-import MapView, { Marker, Circle, Callout } from "react-native-maps";
 
-const App = (props) => {
-  return <Text>HELLO</Text>;
+const PlaceDetails = () => {
+  return <Text>HELLO2</Text>;
 };
+
+export default PlaceDetails;
