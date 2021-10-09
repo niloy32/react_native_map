@@ -14,7 +14,7 @@ import * as Location from "expo-location";
 import { FontAwesome5 } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("screen");
 import { createStackNavigator } from "react-navigation-stack";
-import Navigator from "./routes/HomeStack";
+import Home from "./routes/HomeStack";
 
 const App = ({ navigation }) => {
   const test = () => alert("pera");
@@ -125,7 +125,7 @@ const App = ({ navigation }) => {
   // }, []);
 
   return (
-    <Navigator />
+    <Home />
     // <View style={styles.container}>
     //   <StatusBar style="auto" />
     //   <MapView

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "807016394648",
+    "project_id": "portfolio-reactv1",
+    "storage_bucket": "portfolio-reactv1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807016394648:android:5542e7b91ec8c93c0cc5ed",
+        "android_client_info": {
+          "package_name": "react.native.map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807016394648-qds73vtu63b8h71pvsmrk41amnuvqovh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn7mV0Zw_-KG-7dNvqdk5ZC_gsCJo13A0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807016394648-qds73vtu63b8h71pvsmrk41amnuvqovh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
